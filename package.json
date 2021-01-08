@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/nanamestripe/sweet-montblanc/issues"
   },
-  "homepage": "https://github.com/nanamestripe/sweet-montblanc#readme"
+  "homepage": "https://github.com/nanamestripe/sweet-montblanc#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-less": "^4.0.1"
+  }
 }
