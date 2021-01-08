@@ -115,36 +115,33 @@ wp_reset_postdata();
       <main id="main" class="site-main" role="main">
 
         <section class="clearfix featuredcat-content">
-          <?php $cat_slug = get_option('home_cat_slug'); $reco_ob = new wp_query(array('category_name'=>$cat_slug, 'posts_per_page'=>9, 'post_status'=>'publish')); ?>
+          <?php /* $cat_slug = get_option('home_cat_slug'); $reco_ob = new wp_query(array('category_name'=>$cat_slug, 'posts_per_page'=>9, 'post_status'=>'publish')); */ ?>
 
           <ul class="featuredcat products columns-3">
             <?php
-				    $cat_slug = get_option('home_cat_slug');
+				    /* $cat_slug = get_option('home_cat_slug');
 			        $args = array( 'post_type' => 'product', 'posts_per_page' => 6, 'product_cat' => $cat_slug );
 			        $loop = new WP_Query( $args );
-			        while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
+			        while ( $loop->have_posts() ) : $loop->the_post(); global $product; */ ?>
             <li class="product type-product">
-              <a href="<?php echo get_permalink( $loop->post->ID ) ?>"
-                title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
-                <?php woocommerce_show_product_sale_flash( $post, $product ); ?>
-                <?php if (has_post_thumbnail( $loop->post->ID )) echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog');; ?>
-                <h2 class="woocommerce-loop-product__title"><?php the_title(); ?></h2>
-                <span class="price"><?php echo $product->get_price_html(); ?></span>
+              <a href="<?php /* echo get_permalink( $loop->post->ID ) */ ?>"
+                title="<?php /* echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); */ ?>">
+                <?php /* woocommerce_show_product_sale_flash( $post, $product ); ?>
+                <?php if (has_post_thumbnail( $loop->post->ID )) echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog');; */ ?>
+                <h2 class="woocommerce-loop-product__title"><?php /* the_title(); */ ?></h2>
+                <span class="price"><?php /* echo $product->get_price_html(); */ ?></span>
               </a>
             </li>
-            <?php endwhile; ?>
-            <?php wp_reset_query(); ?>
+            <?php /* endwhile; */ ?>
+            <?php /* wp_reset_query(); */ ?>
           </ul>
           <!--/.products-->
-          <?php if(get_option('home_cat_btn')): ?><div class="viewall button"><a
-              href="<?php echo get_option('home_cat_url'); ?>"><?php echo get_option('home_cat_btn'); ?></a></div>
-          <?php endif; ?>
+          <!-- <?php /* if(get_option('home_cat_btn')): */ ?><div class="viewall button"><a
+              href="<?php /* echo get_option('home_cat_url'); */ ?>"><?php /* echo get_option('home_cat_btn'); */ ?></a>
+          </div> -->
+          <?php /* endif; */ ?>
         </section>
-
         <?php endif; ?>
-
-
-
 
 
       </main><!-- #main -->
