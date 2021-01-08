@@ -55,10 +55,7 @@
   width: 30%;
   display: inline-block;
   vertical-align: top;
-  margin: 0 5% 60px 0;
-}
-#secondary .widget:nth-child(3n) {
-  margin-right: 0;
+  margin: 0 3% 60px 0;
 }
 .woocommerce,
 .woocommerce-page {
@@ -295,8 +292,8 @@
 .woocommerce-page ul.products li:nth-child(3n) {
   margin-right: 0;
 }
-.woocommerce ul.products li:nth-child(3n+4),
-.woocommerce-page ul.products li:nth-child(3n+4) {
+.woocommerce ul.products li:nth-child(3n + 4),
+.woocommerce-page ul.products li:nth-child(3n + 4) {
   clear: both;
 }
 .woocommerce .woocommerce-result-count,
