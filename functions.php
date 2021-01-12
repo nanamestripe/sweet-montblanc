@@ -53,4 +53,23 @@ add_action( 'wp_enqueue_scripts', 'mybootstrap_enqueue_scripts' );
 
 /*【表示カスタマイズ】アイキャッチ画像の有効化 */
 add_theme_support('post-thumbnails');
+
+
+/* 投稿ページ一覧ページとアーカイブページのみcustom.cssを読み込む*/
+function addcustom_scripts(){
+    // wp_enqueue_style('style', get_stylesheet_uri().'/style.css');
+    if (is_archive() || is_home()) {
+        wp_enqueue_style('custom', get_stylesheet_directory_uri().'/css/custom.css',array('montblanc-style','mybootstrap-style'));
+        wp_enqueue_style('woocommerce-custom', get_stylesheet_directory_uri().'/css/woocommerce-custom.css', array('woocommerce-layout','woocommerce-layout-child'));
+
+
+    }
+    else{
+        wp_enqueue_style('style', get_stylesheet_directory_uri().'/style.css');
+ wp_enqueue_style('woocommerce-layout', get_stylesheet_directory_uri().'css/woocommerce-layout.css');
+
+    }
+}
+add_action('wp_enqueue_scripts', 'addcustom_scripts');
+
 ?>
