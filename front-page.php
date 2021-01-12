@@ -15,8 +15,8 @@ get_header(); ?>
 
 <div id="oneclm" class="content-area front-page woocommerce-page ">
   <main id="main" class="site-main" role="main">
-
     <section class="sec">
+      <h2><span>トップニュース</span></h2>
       <div class="container">
         <div class="row">
           <?php
