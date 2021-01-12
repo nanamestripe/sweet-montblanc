@@ -229,6 +229,9 @@ a img {
   border-bottom: 1px solid #eee;
 }
 .categoryheaderimg {
+  max-width: 1330px;
+  width: 100%;
+  margin: 0 auto;
 }
 .categoryheaderimg img {
   width: 100%;
