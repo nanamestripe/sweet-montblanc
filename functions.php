@@ -33,20 +33,20 @@ function theme_enqueue_scripts() {
 }
 
 
-function mybootstrap_enqueue_styles() {
-    wp_register_style('bootstrap', get_stylesheet_directory_uri() . '/bootstrap/css/bootstrap.min.css' );
-    wp_register_style('bootstrap', get_stylesheet_directory_uri() . '/bootstrap/css/bootstrap.min.css.map' );
-    $dependencies = array('bootstrap');
-    wp_enqueue_style( 'mybootstrap-style', get_stylesheet_uri(), $dependencies );
-}
+// function mybootstrap_enqueue_styles() {
+//     wp_register_style('bootstrap', get_stylesheet_directory_uri() . '/bootstrap/css/bootstrap.min.css' );
+//     wp_register_style('bootstrap', get_stylesheet_directory_uri() . '/bootstrap/css/bootstrap.min.css.map' );
+//     $dependencies = array('bootstrap');
+//     wp_enqueue_style( 'mybootstrap-style', get_stylesheet_uri(), $dependencies );
+// }
 
-function mybootstrap_enqueue_scripts() {
-    $dependencies = array('jquery');
-    wp_enqueue_script('bootstrap', get_stylesheet_directory_uri() . '/bootstrap/js/bootstrap.min.js', $dependencies, '3.4.1', true ); // trueとしてbodyタグのクロージングの前で読み込むように設定
-}
+// function mybootstrap_enqueue_scripts() {
+//     $dependencies = array('jquery');
+//     wp_enqueue_script('bootstrap', get_stylesheet_directory_uri() . '/bootstrap/js/bootstrap.min.js', $dependencies, '3.4.1', true ); // trueとしてbodyタグのクロージングの前で読み込むように設定
+// }
 
-add_action( 'wp_enqueue_scripts', 'mybootstrap_enqueue_styles' );
-add_action( 'wp_enqueue_scripts', 'mybootstrap_enqueue_scripts' );
+// add_action( 'wp_enqueue_scripts', 'mybootstrap_enqueue_styles' );
+// add_action( 'wp_enqueue_scripts', 'mybootstrap_enqueue_scripts' );
 
 
 
