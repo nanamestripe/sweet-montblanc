@@ -15,40 +15,6 @@ get_header(); ?>
 
 <div id="oneclm" class="content-area front-page woocommerce-page ">
   <main id="main" class="site-main" role="main">
-    <!-- <section class="news">
-      <div class="sitewidth">
-        <h2><span>News</span></h2>
-
-        <ul class="clear">
-          <?php /* $the_query = new WP_Query( 'showposts=3' ); */ ?>
-          <?php /* while ($the_query -> have_posts()) : $the_query -> the_post(); */ ?>
-          <li>
-            <a href="<?php /* the_permalink() */ ?>">
-
-
-              <?php /* if (has_post_thumbnail() ) {
-					the_post_thumbnail(' medium ');
-					}
-					else {
-						echo '<img src="'.get_stylesheet_directory_uri().'/css/placeholder-image.png" alt="Placeholder" width="300px" height="200px" />';
-						} */
-						?>
-
-
-
-            </a>
-            <h3><a href="<?php /* the_permalink() */ ?>"><?php /* the_title(); */ ?></a></h3>
-            <time
-              datetime="<?php /* echo get_the_date('', '', '', true); */ ?>"><?php /* echo get_the_date('', '', '', true); */ ?></time>
-            <p><?php /* echo mb_substr(get_the_excerpt(), 0, 40); */ ?></p>
-
-          </li>
-
-          <?php /* endwhile; */?>
-        </ul>
-
-      </div>
-    </section> -->
     <!-- <section class="sec">
       <h2><span>トップニュース</span></h2>
       <div class="container">
