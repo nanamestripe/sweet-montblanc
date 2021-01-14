@@ -33,7 +33,11 @@ Updated: 2020-12-22 19:59:31
 	12.1 Captions
 	12.2 Galleries
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+0.0 Import
+--------------------------------------------------------------*/
 
+@import "unity.scss";
 /*--------------------------------------------------------------
 1.0 Reset
 --------------------------------------------------------------*/
@@ -256,7 +260,7 @@ a {
 }
 
 #cart-navigation {
-  text-align: right;
+  text-align: left;
 }
 
 #titlebar {
@@ -1166,7 +1170,7 @@ ul.product-categories {
       font-family: "Ionicons";
 
       /* color: @secondarytext; */
-      color: #000000;
+      color: #e36e3a;
       display: block;
       position: absolute;
       top: 0.5em;
@@ -1359,7 +1363,7 @@ ul.product-categories {
 }
 
 .news {
-  background: rgba(0, 0, 0, 0.03);
+  background: transparent;
   padding: 0 0 40px;
 
   /* padding: 40px 0; */
@@ -1987,4 +1991,13 @@ object {
 
 .variations label {
   color: #000000;
+}
+
+/*--------------------------------------------------------------
+13 Snow Monkew Style Override
+--------------------------------------------------------------*/
+.smb-items__banner__body > .smb-items__banner__title{
+  font-size: 20px;
+    font-weight: bold;
+
 }
