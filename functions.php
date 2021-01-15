@@ -23,11 +23,18 @@ function theme_enqueue_scripts() {
         //子テーマのstyle.css
         wp_enqueue_style('style-child', get_stylesheet_directory_uri() . '/style.css', array( 'style' ));
 
-//親テーマのstyle.css
+//親テーマのwoocommerce-layout.css
     wp_enqueue_style('woocommerce-layout', get_template_directory_uri() . '/css/woocommerce-layout.css');
 
-        //子テーマのstyle.css
-        wp_enqueue_style('woocommerce-layout-child', get_stylesheet_directory_uri() . '/css/woocommerce-layout.css', array( 'woocommerce-layout' ));
+//子テーマのwoocommerce-layout.css
+wp_enqueue_style('woocommerce-layout-child', get_stylesheet_directory_uri() . '/css/woocommerce-layout.css', array( 'woocommerce-layout' ));
+
+//親テーマのwoocommerce.css
+    wp_enqueue_style('woocommerce', get_template_directory_uri() . '/css/woocommerce.css');
+
+//子テーマのwoocommerce.css
+wp_enqueue_style('woocommerce-child', get_stylesheet_directory_uri() . '/css/woocommerce.css', array( 'woocommerce' ));
+
 
 
 }
@@ -61,15 +68,19 @@ function addcustom_scripts(){
     if (is_archive() || is_home()) {
         wp_enqueue_style('custom', get_stylesheet_directory_uri().'/css/custom.css',array('montblanc-style','mybootstrap-style'));
         wp_enqueue_style('woocommerce-custom', get_stylesheet_directory_uri().'/css/woocommerce-custom.css', array('woocommerce-layout','woocommerce-layout-child'));
-
-
     }
     else{
         wp_enqueue_style('style', get_stylesheet_directory_uri().'/style.css');
  wp_enqueue_style('woocommerce-layout', get_stylesheet_directory_uri().'css/woocommerce-layout.css');
-
     }
 }
 add_action('wp_enqueue_scripts', 'addcustom_scripts');
+
+function add_bulmafiles()
+{
+    // bulma CSSの読み込み
+    wp_enqueue_style('bulma', '//cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.css', array(), '0.8.0',false);
+}
+add_action('wp_enqueue_scripts', 'add_bulmafiles');
 
 ?>

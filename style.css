@@ -234,7 +234,7 @@ a img {
 }
 
 #cart-navigation {
-  text-align: right;
+  text-align: left;
 }
 
 #titlebar {
@@ -1024,7 +1024,7 @@ ul.product-categories ul.children li:before {
   content: "\f38a";
   font-family: "Ionicons";
   /* color: @secondarytext; */
-  color: #000000;
+  color: #e36e3a;
   display: block;
   position: absolute;
   top: 0.5em;
@@ -1200,7 +1200,7 @@ ul.product-categories ul.children li:before {
 }
 
 .news {
-  background: rgba(0, 0, 0, 0.03);
+  background: transparent;
   padding: 0 0 40px;
   /* padding: 40px 0; */
 }
@@ -1796,4 +1796,12 @@ object {
 
 .variations label {
   color: #000000;
+}
+
+/*--------------------------------------------------------------
+13 Snow Monkew Style Override
+--------------------------------------------------------------*/
+.smb-items__banner__body > .smb-items__banner__title {
+  font-size: 20px;
+  font-weight: bold;
 }

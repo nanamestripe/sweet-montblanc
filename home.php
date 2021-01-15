@@ -1,7 +1,11 @@
 <?php
 /**
- * The template for displaying archive pages.
+ * The main template file.
  *
+ * This is the most generic template file in a WordPress theme
+ * and one of the two required files for a theme (the other being style.css).
+ * It is used to display a page when nothing more specific matches a query.
+ * E.g., it puts together the home page when no home.php file exists.
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
  * @package montblanc
@@ -9,20 +13,10 @@
 
 get_header(); ?>
 
-<section id="primary" class="content-area">
+<div id="primary" class="content-area">
   <main id="main" class="site-main" role="main">
 
     <?php if ( have_posts() ) : ?>
-
-    <header class="page-header">
-      <?php
-					// Show an optional term description.
-					$term_description = term_description();
-					if ( ! empty( $term_description ) ) :
-						printf( '<div class="taxonomy-description">%s</div>', $term_description );
-					endif;
-				?>
-    </header><!-- .page-header -->
 
     <?php /* Start the Loop */ ?>
     <?php while ( have_posts() ) : the_post(); ?>
@@ -32,8 +26,7 @@ get_header(); ?>
 					 * If you want to override this in a child theme, then include a file
 					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 					 */
-					get_template_part( 'content','archive');
-					//get_post_format()を削除、'archive'を追記
+					get_template_part( 'content','home');
 				?>
 
     <?php endwhile; ?>
@@ -47,7 +40,7 @@ get_header(); ?>
     <?php endif; ?>
 
   </main><!-- #main -->
-</section><!-- #primary -->
+</div><!-- #primary -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
